@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+.heading {
+  font-family: "Playfair Display", serif;
+}
+
+.heading-main {
+  font-size: 4.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+
+  @include response($bp-lg) {
+    font-size: 3.2rem;
+
+    @include response($bp-sm) {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 2.4rem;
+  font-weight: 700;
+  @include response($bp-sm) {
+    font-size: 1.8rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.8rem;
+  font-weight: 400;
+
+  @include response($bp-sm) {
+    font-size: 1.6rem;
+  }
+}

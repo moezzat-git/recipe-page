@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$bp-lg: 850px;
+$bp-md: 650px;
+$bp-sm: 450px;
+
+html {
+  font-size: 62.5%;
+
+  @include response($bp-lg) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+}
+
+.container {
+  max-width: 95rem;
+  margin: 0 auto;
+  font-weight: 400;
+  margin-top: 5.2rem;
+  margin-bottom: 9.3rem;
+  padding: 0 2.4rem;
+
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  column-gap: 10%;
+
+  @include response($bp-md) {
+    grid-template-columns: 1fr;
+    padding: 0 1.2rem;
+  }
+}
+
+.signature {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #b9bdcf;
+  text-align: center;
+  margin-bottom: 2.4rem;
+
+  &__name {
+    font-weight: 500;
+    border-bottom: 1px solid currentColor;
+  }
+}
